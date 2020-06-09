@@ -1,4 +1,0 @@
-stopwords
-sent_tokenize 
-word_tokenize
-PorterStemmer
