@@ -1,1 +1,3 @@
-stopwords
+corpus
+tokenize 
+stem
