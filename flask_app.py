@@ -144,7 +144,7 @@ def home():
 		paragraph=request.form.get('paragraph')
 		if paragraph:
 			if request.form['button']=='Generate Summary':
-				word_frequency= {}
+				'''word_frequency= {}
 				ps=PorterStemmer()
 				tokenizer=word_tokenize(paragraph)
 
@@ -190,10 +190,10 @@ def home():
 				for sentence in sentence_list:
 				    if sentence[:15] in sentence_strengths and sentence_strengths[sentence[:15]]>threshold:
 				        summary+=sentence
-				        sentence_count+=1
+				        sentence_count+=1'''
 
 				
-				'''sentences = sent_tokenize(paragraph)
+				sentences = sent_tokenize(paragraph)
 				total_documents = len(sentences)
 				#print(sentences)
 
@@ -226,7 +226,7 @@ def home():
 				#print(threshold)
 
 				# 9 Important Algorithm: Generate the summary
-				summary = _generate_summary(sentences, sentence_scores, 1.3 * threshold)'''
+				summary = _generate_summary(sentences, sentence_scores, 1.3 * threshold)
 				return render_template('summary.html',summary=summary)
 			
 			elif request.form['button']=='Generate Title':
