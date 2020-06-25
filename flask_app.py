@@ -19,7 +19,7 @@ from flask_login import UserMixin
 
 app=Flask(__name__)
 app.secret_key = 'asrtarstaursdlarsn'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join('site.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 bcrypt=Bcrypt(app)
 db=SQLAlchemy(app)
 
